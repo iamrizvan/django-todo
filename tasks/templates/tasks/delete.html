@@ -1,0 +1,7 @@
+<h4>Are you sure, you want to delete </h4><h4 > {{item}} ?</h4>
+<!-- If cancel redirect to home page -->
+<a href="{% url 'list' %}">Cancel</a> 
+<form method="POST" action=''>
+{% csrf_token %}
+<input type='submit' name='Confirm'>
+</form>
